@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <style>
+            .c1{
+                background-color: blueviolet;
+                color: rgb(40, 13, 189);
+            }
+            .c2{
+                background-color: aqua;
+                color: firebrick;
+            }
+        </style>
+        <script>
+            function fun(e)
+            {
+                e.className='c1'
+            }
+            function fun1(e)
+            {
+                e.className='c2'
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="text" onfocus="fun(this)" onblur="fun1(this)"/>
+        </form>
+    </body>
+</html>

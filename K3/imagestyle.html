@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0px;
+                padding: opx;
+                outline: 0px;
+            }
+            .container{
+                width: 50%;
+                height: 50vh;
+                margin: auto;
+                top: 25vh;
+                position: relative;
+            }
+            .container img{
+               width: 100%;
+               height: 50vh;
+               border-radius: 50%;
+               background-color: transparent;
+            }
+            .mask{
+                display: block;
+                position: absolute;
+                background: url("lisa.jpg");
+                border-radius: 50%;
+                width: 100%;
+                height: 50vh;
+                top: 0px;
+                left: 0px;
+                background-size: 100;
+            }
+            .container:hover .mask{
+                opacity: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="cloud1.jpg"/>
+            <div class="mask"></div>
+        </div>
+    </body>
+</html>

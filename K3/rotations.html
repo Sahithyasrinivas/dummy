@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+            .container{
+                width: 500px;
+                height: 500px;
+                background-color: blueviolet;
+                border-radius: 70%;
+                background: conic-gradient(yellow,green,rgb(202, 131, 143),orange,blueviolet,blue);
+                animation: rotation 1s infinite;
+            }
+            @keyframes rotation{
+                10%{
+                    transform: rotateZ(0deg);
+                }
+                50%{
+                    transform: rotateZ(180deg);
+                }
+                70%{
+                    transform: rotateZ(360deg);
+                }
+            }        
+        </style>
+    </head>
+    <body>
+        <div class="container"></div>
+    </body>
+</html>

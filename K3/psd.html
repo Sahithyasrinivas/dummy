@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <style>
+            .check{
+                font-size: 30px;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <input type="password" onkeyup="fun(this)"/>
+            <div class="check">password length should be atleast 8 characters</div>
+            <div class="check">Spaces are not allowed</div>
+            <div class="check">Atleast one lowercase</div>
+            <div class="check">Atleast one uppercase</div>
+            <div class="check">Atleast one digit</div>
+            <div class="check">Atleast one special Symbol @#$%^&*</div>
+            <div class="check">Starts with Uppercase</div>
+        </div>
+        <script>
+            function fun(er)
+            {
+                let str=er.value
+                let fr=document.getElementsByClassName('check')
+            if (str.length>=8){
+                fr[0].style.color='green'
+            }
+            else{
+                fr[0].style.color='blueviolet'
+            }
+            if (/^\S*$/.test(str)){
+                fr[1].style.color='green'
+            }
+            else{
+                fr[1].style.color='blueviolet'
+            }
+            if (/[a-z]+/.test(str)){
+                fr[2].style.color='green'
+            }
+            else{
+                fr[2].style.color='blueviolet'
+            }
+            if (/[A-Z]+/.test(str)){
+                fr[3].style.color='green'
+            }
+            else{
+                fr[3].style.color='blueviolet'
+            }
+            if (/[0-9]+/.test(str)){
+                fr[4].style.color='green'
+            }
+            else{
+                fr[4].style.color='blueviolet'
+            }
+            if (/[@#$%^&*]+/.test(str)){
+                fr[5].style.color='green'
+            }
+            else{
+                fr[5].style.color='blueviolet'
+            }
+            if (/^[A-Z]+/.test(str)){
+                fr[6].style.color='green'
+            }
+            else{
+                fr[6].style.color='blueviolet'
+            }
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            .d1{
+                width: 400px;
+                height: 400px;
+                position: relative;
+                background-color: blueviolet;
+            }
+            .d2{
+                width: 300px;
+                height: 300px;
+                top: 50px;
+                left: 50px;
+                position: relative;
+                background-color: yellow;
+            }
+            .d3{
+                width: 200px;
+                height: 200px;
+                top: 50px;
+                left: 50px;
+                position: relative;
+                background-color:blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="d1" onclick="fun1(this,event)">
+        <div class="d2" onclick="fun2(this,event)">
+        <div class="d3" onclick="fun3(this,event)">
+        </div>
+        </div>
+        </div>
+        <script>
+            function fun3(e,event)
+            {
+                event.stopPropagation()
+                console.log('div3')
+            }
+            function fun2(e,event)
+            {
+                event.stopPropagation()
+                console.log('div2')
+            }
+            function fun1(e,event)
+            {
+                console.log('div1')
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <script>
+            function fun(event)
+            {
+                event.preventDefault()
+            }
+            function setname(e)
+            {
+                document.getElementById("name").innerHTML=e.value
+            }
+            function setpassword(e)
+            {
+                   ...........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................                                                                                                                                                                              // document.getElementById("pwd").innerHTML=e.value
+            }
+            function setgen(e)
+            {
+                console.log(e.value)
+            }
+            let lan=[]
+            function setlang(e)
+            {
+               if(e.checked)
+               {
+                lan.push(e.value)
+               }
+               else
+               {
+                lan.splice(lan.indexOf(e.value),1)
+               }
+               console.log(lan)
+            }
+            function getbranch(e)
+            {
+                console.log(e.value)
+            }
+            function getadd(e)
+            {
+                console.log(e.value)
+            }
+            function getcolor(e)
+            {
+                console.log(e.value)
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="fun(event)">
+            <input type="text" onkeyup="setname(this)"/>
+            <input type="password" onchange="setpassword(this)"/>
+            <input type="radio" name='gen' value="female"onchange="setgen(this)"/>
+            <input type="radio" name='gen' value="male"onchange="setgen(this)"/>
+            <input type="checkbox" value="telugu"onchange="setlang(this)"/>
+            <input type="checkbox" value="english"onchange="setlang(this)"/>
+            <input type="checkbox" value="hindi"onchange="setlang(this)"/>
+            <input type="checkbox" value="kannada"onchange="setlang(this)"/>
+            <select onchange="getbranch(this)">
+                <option value="b1">CSE</option>
+                <option value="b2">mech</option>
+                <option value="b1">civil</option>
+            </select>
+            <textarea rows="5" cols="10" onchange="getadd(this)"></textarea>
+            <input type="color" onchange="getcolor(this)"/>
+            <input type="submit"/>
+        </form>
+        <div>
+            <div id="name"></div>
+            <div id="pwd"></div>
+        </div>
+    </body>
+</html>

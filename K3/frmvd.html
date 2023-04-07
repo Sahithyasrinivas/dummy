@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <style>
+            .errormsg{
+                color: red;
+                display: none;
+                font-size: 12px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <input type="text" onblur="fun(this)"/>
+            <p class="errormsg">Input field must be atleast 5 characters</p>
+        </div>
+        <script>
+            function fun(er)
+            {
+                let str=er.value
+                let re=/^[a-z]{5,}$/
+                let emr=document.getElementsByClassName('errormsg')[0]
+                if (re.test(str))
+                {
+                    emr.style.display='none'
+                }
+                else{
+                    emr.style.display='block'
+                }
+            }
+        </script>
+    </body>
+</html>

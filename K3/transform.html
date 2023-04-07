@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <style>
+            .container{
+                width: 500px;
+                height: 500px;
+                background-color: blueviolet;
+                margin: auto;
+                padding-top: 30px;
+                background: radial-gradient(yellow,green,rgb(202, 131, 143),orange,blueviolet,blue);
+                animation: rotation 1s infinite;
+            }
+            @keyframes rotation{
+                100%{
+                    transform: rotateZ(360deg);
+                }
+            }        
+        </style>
+    </head>
+    <body>
+        <div class="container"></div>
+    </body>
+</html>

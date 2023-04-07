@@ -1,0 +1,24 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <button onclick="add()">add event</button>
+        <button onclick="delfun()">remove event</button>
+        <button id="b1">hello</button>
+        <script>
+            let a=document.getElementById('b1')
+            function add()
+            {
+                a.addEventListener('click',getalert)
+            }
+            function getalert()
+            {
+                window.alert('sahithya srinivas')
+            }
+            function delfun()
+            {
+                a.removeEventListener('click',getalert)
+            }
+        </script>
+    </body>
+</html>
